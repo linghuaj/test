@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+ <title>test</title>
+ <meta name="viewport" content="width=device-width">
+</head>
+<body>
+ <div id="show_id1"></div>
+ <h2>Test es6</h2>
+ <div></div>
+<script>
+function A(){}
+A.prototype.pet = 'dog';
+function B {A.call(this);};
+B.prototype = Object.create(A.prototype);
+B.prototype.constructor = B;
+
+if (A.hasOwnProperty("pet")) {
+ alert("A hasOwnProperty pet");
+} else {
+ alert("A doesn't hasOwnProperty pet");
+}
+ 
+if (B["pet"] == "dog") {
+ alert("B has pet ", B["pet"]);
+}
+if (B.hasOwnProperty("pet")) {
+ alert("B hasOwnProperty pet");
+} else {
+ alert ("B doesn't hasOwnProperty pet");
+}
+ </script>
+
+</body>
