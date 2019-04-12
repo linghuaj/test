@@ -6,6 +6,9 @@
 </head>
 <body>
  <div id="show_id1"></div>
+ <div id="show_id2"></div>
+ <div id="show_id3"></div> 
+ <div id="show_id4"></div> 
  <h2>Test es5</h2>
  <div></div>
 <script>
@@ -15,7 +18,7 @@ function B() {A.call(this);};
 B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
 if (A.prototype["pet"]){
- alert("A.prototype has pet", A.prototype["pet"])
+ document.getElementById("show_id1").innerHTML = "A.prototype has pet" + A.prototype["pet"];
 }
 if (A.prototype.hasOwnProperty("pet")) {
  alert("A prototype hasOwnProperty pet");
