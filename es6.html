@@ -13,23 +13,22 @@ class A{};
 A["pet"] = "dog";
 class B extends A {};
 
-if (A["pet"]) {
- alert("A has pet ", A["pet"]);
+ if (A["pet"]){
+ document.getElementById("show_id1").innerHTML = "A.prototype has pet " + A["pet"];
 }
- 
 if (A.hasOwnProperty("pet")) {
- alert("A hasOwnProperty pet");
+  document.getElementById("show_id2").innerHTML =  "A prototype hasOwnProperty pet";
 } else {
- alert("A doesn't hasOwnProperty pet");
+  document.getElementById("show_id2").innerHTML = "A prototype doesn't hasOwnProperty pet";
 }
  
 if (B["pet"] == "dog") {
- alert("B has pet ", B["pet"]);
+ document.getElementById("show_id3").innerHTML = "B.prototype has pet " + B.prototype["pet"];
 }
 if (B.hasOwnProperty("pet")) {
- alert("B hasOwnProperty pet");
+document.getElementById("show_id4").innerHTML  = "B.prototype hasOwnProperty pet";
 } else {
- alert ("B doesn't hasOwnProperty pet");
+ document.getElementById("show_id4").innerHTML = "B.prototype doesn't hasOwnProperty pet";
 }
  </script>
 
