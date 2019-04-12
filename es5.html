@@ -6,12 +6,12 @@
 </head>
 <body>
  <div id="show_id1"></div>
- <h2>Test es6</h2>
+ <h2>Test es5</h2>
  <div></div>
 <script>
-function A(){}
+function A(){};
 A.prototype.pet = 'dog';
-function B {A.call(this);};
+function B() {A.call(this);};
 B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
 
