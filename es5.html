@@ -14,20 +14,22 @@ A.prototype.pet = 'dog';
 function B() {A.call(this);};
 B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
-
-if (A.hasOwnProperty("pet")) {
- alert("A hasOwnProperty pet");
+if (A.prototype["pet"]){
+ alert("A.prototype has pet", A.prototype["pet"])
+}
+if (A.prototype.hasOwnProperty("pet")) {
+ alert("A prototype hasOwnProperty pet");
 } else {
- alert("A doesn't hasOwnProperty pet");
+ alert("A prototype doesn't hasOwnProperty pet");
 }
  
-if (B["pet"] == "dog") {
- alert("B has pet ", B["pet"]);
+if (B.prototype["pet"] == "dog") {
+ alert("B.prototype has pet ", B.prototype["pet"]);
 }
-if (B.hasOwnProperty("pet")) {
- alert("B hasOwnProperty pet");
+if (B.prototype.hasOwnProperty("pet")) {
+ alert("B.prototype hasOwnProperty pet");
 } else {
- alert ("B doesn't hasOwnProperty pet");
+ alert ("B.prototype doesn't hasOwnProperty pet");
 }
  </script>
 
