@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+ <title>test</title>
+ <meta name="viewport" content="width=device-width">
+ <style>
+ @keyframes aaa{
+  0%{transform:scale(1,0);}
+  100%{transform:scale(1,1.98);}
+}
+
+.bbb{animation:aaa 5.00s linear;}
+
+#container{
+  height:100px;
+  width:100px;
+  background:green;
+  position:relative;
+}
+
+#mask{
+  position:absolute;
+  right:0;
+  left:0;
+  bottom:0;
+  height:50px;
+  background:yellow;
+  transform-origin:0 100%;
+  opacity:0
+}
+#mask.bbb{opacity:1}
+  
+}
+
+ </style>
+</head>
+<body>
+ <div id="container">
+  <div id="mask">
+  </div>
+</div>
+<script>
+document.getElementById('container').addEventListener('click', ()=>{
+document.getElementById('mask').classList = "bbb";
+})
+ </script>
+
+</body>
