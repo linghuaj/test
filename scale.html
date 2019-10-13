@@ -40,9 +40,14 @@
   </div>
 </div>
 <script>
-document.getElementById('container').addEventListener('click', function(){
-document.getElementById('mask').classList = "bbb";
-})
+ document.addEventListener("DOMContentLoaded", function(event) { 
+  console.log('loaded');
+  document.getElementById('container').addEventListener('click', function(){
+    console.log('click');
+   document.getElementById('mask').classList = "bbb";
+  });
+});
+
  </script>
 
 </body>
